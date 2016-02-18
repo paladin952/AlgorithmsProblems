@@ -22,7 +22,7 @@ import math
 
 args = input()
 int_args = args.split(' ')
-n = int(int_args[0])
+n = int(int_args)
 m = int(int_args[1])
 a = int(int_args[2])
 

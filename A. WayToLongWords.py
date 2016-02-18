@@ -45,7 +45,7 @@ def solve_the_problem():
 
 def short_the_word(word):
     result = ""
-    result += word[0]
+    result += word
     result += str(len(word) - 2)
     result += word[len(word) - 1]
 
