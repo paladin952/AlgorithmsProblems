@@ -11,10 +11,37 @@
 # Output
 # If Vasya managed to say hello, print "YES", otherwise print "NO".
 
+FINAL_RESULT = ['h', 'e', 'l', 'l', 'o']
+
+
+def calculate_freq(letter, word):
+    frequency = 0
+    for i in word:
+        if i == letter:
+            frequency += 1
+    return frequency
+
 
 def solve_the_problem():
     word = input()
-    # TODO
+    result = []
+    for i in word:
+        if i == 'h':
+            if len(result) == 0:
+                result.append(i)
+        elif i == 'e':
+            if len(result) == 1 and result[0] == 'h':
+                result.append(i)
+        elif i == 'l':
+            if len(result) == 2 and result[1] == 'e' or len(result) == 3 and result[2] == 'l':
+                result.append(i)
+        elif i == 'o':
+            if len(result) == 4 and result[3] == 'l':
+                result.append(i)
+    if result == FINAL_RESULT:
+        print("YES")
+    else:
+        print("NO")
 
 
 if __name__ == "__main__":
