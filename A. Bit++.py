@@ -30,8 +30,6 @@
 # Print a single integer — the final value of x.
 
 PLUS = ["++X", "X++"]
-MINUS = ["--X", "X--"]
-
 
 def solve_the_problem():
     n = int(input())
